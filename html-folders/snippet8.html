@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[required]{
+            border: 2px dashed red;
+        }
+        input[checked]{
+            border: 2px dashed rgb(132, 0, 255);
+            border-radius: 54px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <input type="checkbox" id="subscribe" checked>
+        <label for="subscribe">Subscribe</label>
+    </form>
+</body>
+</html>
