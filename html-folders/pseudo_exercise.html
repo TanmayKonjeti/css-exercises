@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        p a:visited{
+            color: gray;
+        }
+        p a:link{
+            color: green;
+        }
+        .hover-effect:hover{
+            background-color: lightblue;
+            color: darkblue;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .active-effect:active{
+            background-color: darkred;
+            color: white;
+            padding: 5px;
+        }
+        #myInput:focus{
+            border: 2px solid orange;
+            box-shadow: 0 2px 2px 1px rgb(230, 169, 64);
+            outline: none;
+        }
+        ul>li:first-child{
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+        div>p:last-child{
+            background-color: lightgray;
+            padding: 10px;
+        }
+        table,thead,th,tr,td{
+            border: 2px solid ;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        tr:nth-child(2n){
+            background-color: lightyellow;
+        }
+        div>p:nth-of-type(2){
+            color: plum;
+            font-style: italic;
+        }
+        .only-child p:only-child{
+            border: 2px dashed green;
+            background-color: lightgreen;
+        }
+        .only-one li:only-of-type{
+            background-color: gold;
+        }
+        span:empty{
+            display: inline-block;
+            height: 20px;
+            width: 50px;
+            background-color: lightcoral;
+            border: 2px solid black;
+        }
+        button:not(.cancel){
+            background-color: blue;
+            color: white;
+        }
+        button.cancel{
+            background-color: gray;
+            color: black;
+        }
+        input[type="checkbox"]:checked + label{
+            font-weight: bolder;
+            color: green;
+        }
+        input[type="text"]:disabled{
+            background-color: lightgrey;
+            cursor: not-allowed;
+        }
+        textarea{
+            border: 2px solid lightblue;
+        }
+        #comments:focus{
+            border: 2px solid orange;
+            box-shadow: 0 2px 2px 2px lightsalmon ;
+        }
+        input:required{
+            border: 1px solid red;
+            box-shadow: 1px 1px 2px 2px red;
+        }
+        input:optional{
+            border: 2px solid green;
+        }
+        #section-highlight:target{
+            background-color: yellow;
+            border: 2px solid orange;
+        }
+        .input-group:focus-within{
+            background-color: lightblue;
+            border: 5px solid;
+            box-shadow: 1px 1px 2px 2px grey ;
+        }
+        p:lang(es){
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>1.</h1>
+    <p><a href="https://www.example.com">Example Link (try visiting)</a></p>
+    <p><a href="https://www.nonexistentlink123abc.com">Likely Unvisited Link</a></p>
+    <hr><hr>
+    <h1>2.</h1>
+    <button class="hover-effect">Hover Over Me</button>
+    <hr><hr>
+    <h1>3.</h1>
+    <button class="active-effect">Click and Hold Me</button><hr><hr>
+    <h1>4.</h1>
+    <label for="myInput">Focus on me:</label>
+    <input type="text" id="myInput" placeholder="Click here">
+    <hr><hr>
+    <h1>5.</h1>
+    <ul>
+        <li>First Item (Style item)</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+    <ul>
+        <li>First Item (Style item)</li>
+        <li>Second Item</li>
+    </ul>
+    <hr><hr>
+    <h1>6.</h1>
+    <div>
+        <p>This is the first paragraph in the div.</p>
+        <p>This is the second paragraph in the div.</p>
+        <p>This is the last paragraph (Styled).</p>
+    </div>
+    <hr>
+    <div>
+        <p>Another first paragraph.</p>
+        <p>Another last paragraph (Styled).</p>
+    </div>
+    <hr><hr>
+    <h1>7.</h1>
+    <table>
+        <thead><th>Header 1</th><th>Header 2</thead>
+        <tr><td>Row 1, Cell 1</td><td>Row 1, Cell 2</td></tr>
+        <tr><td>Row 2, Cell 1 (Styled)</td><td>Row 2, Cell 2</td></tr>
+        <tr><td>Row 3, Cell 1</td><td>Row 3, Cell 2</td></tr>
+        <tr><td>Row 4, Cell 1 (Styled)</td><td>Row 4, Cell 2</td></tr>
+    </table>
+    <hr><hr>
+    <h1>8.</h1>
+    <div>
+        <p>First paragraph.</p>
+        <p>Second paragraph (Styled).</p>
+        <h3>A heading in between</h3>
+        <p>Third paragraph (this is the 3rd 'p' overall, but not styled by this rule).</p>
+    </div>
+    <hr>
+    <div>
+        <h3>Another Heading</h3>
+        <p>First paragraph in new div.</p>
+        <p>Second paragraph in new div (Styled).</p>
+    </div>
+    <hr>
+    <hr>
+    <h1>9.</h1>
+    <div class="only-child">
+        <p>This paragraph is the only child (Styled).</p>
+    </div>
+    <hr>
+    <div>
+        <p>This paragraph is NOT the only child.</p>
+        <span>This is a sibling span.</span>
+    </div>
+    <hr><hr>
+    <h1>10.</h1>
+    <ul class="only-one">
+        <h3>List Items</h3>
+        <li>This is the list item.</li>
+    </ul>
+    <ul class="only-one">
+        <h3>Another List items</h3>
+        <li>Item-1</li>
+        <li>Item-2</li>
+    </ul>
+    <hr><hr>
+    <h1>11.</h1>
+    <p>Empty span: <span class="empty-demo"></span> (Styled)</p>
+    <p>Span with text: <span class="empty-demo">Not Empty</span> (Not Styled)</p>
+    <p>Span with space: <span class="empty-demo"> </span> (Not considered empty by :empty)</p>
+    <hr><hr>
+    <h1>12.</h1>
+        <button class="not">Submit (Styled by :not)</button>
+        <button class="cancel">Cancel (Styled by .cancel)</button>
+        <button class="not">Confirm (Styled by :not)</button>
+    <hr><hr>
+    <h1>13.</h1>
+        <input type="checkbox" name="" id="check">
+        <label for="check">I agree to the terms and conditions.</label>
+        <br>
+        <input type="checkbox" name="" id="check">
+        <label for="check">Subscribe to newsletter</label>
+    <hr><hr>
+    <h1>14.</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" value="Editable">
+    <br><br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" value="FixedUser" disabled>
+    <hr><hr>
+    <h1>15.</h1>
+    <label for="comments">Comments (Enabled):</label><br>
+    <textarea id="comments" rows="3" cols="30"></textarea>
+    <br><br>
+    <label for="notes">Notes (Disabled):</label><br>
+    <textarea id="notes" rows="3" cols="30" disabled>Cannot edit.</textarea>
+    <hr><hr>
+    <h1>16.</h1>
+    <label for="email">Email (Required):</label>
+    <input type="email" id="email" required>
+    <br><br>
+    <label for="phone">Phone (Optional):</label>
+    <input type="tel" id="phone">
+    <hr><hr>
+    <h1>17.</h1>
+    <label for="name">Name (Required):</label>
+    <input type="text" id="name" required>
+    <br><br>
+    <label for="nickname">Nickname (Optional):</label>
+    <input type="text" id="nickname" placeholder="e.g., Buddy">
+    <hr><hr>
+    <h1>18.</h1>
+    <a href="#section-highlight">Jump to Highlighted Section</a>
+    <div style="height: 200px;"><!-- Spacer --></div>
+    <div id="section-normal" class="section">This is a normal section.</div>
+    <div id="section-highlight" class="section">This section will be highlighted when targeted.</div>
+    <div style="height: 200px;"><!-- Spacer --></div>
+    <hr><hr>
+    <h1>19.</h1>
+    <div class="input-group">
+    <label for="field1">Field 1:</label>
+    <input type="text" id="field1">
+    <br><br>
+    <label for="field2">Field 2:</label>
+    <input type="text" id="field2">
+  </div>
+  <br>
+  <div class="input-group">
+    <label for="field3">Field 3:</label>
+    <input type="text" id="field3">
+  </div>
+  <hr><hr>
+  <h1>20.</h1>
+  <p lang="en">This is a paragraph in English.</p>
+  <p lang="es">Este es un párrafo en español. (Styled)</p>
+  <p lang="fr">Ceci est un paragraphe en français.</p>
+  <hr><hr>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myid1:target{
+            background-color: aqua;
+        }
+        #myid2:target{
+            background-color: aquamarine;
+        }
+        #first:enabled{
+            background-color: aqua;
+            border: 2px solid green;
+        }
+        #second:disabled{
+            border: 5px dashed gray;
+        }
+        input[type="checkbox"]:checked + label{
+            /* outline: 2px solid red; */
+            /* background-color: aqua; */
+            accent-color: red;
+        }
+        input[type="checkbox"]:checked{
+            /* outline: 2px solid red; */
+            accent-color: red;
+        }
+        .container-1,.container-2{
+            border: 2px solid lightblue;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        /* div:active{
+            background-color: aqua;
+        } */
+        .example :nth-child(odd){
+            color: red;
+            font-weight: bolder;
+        }
+        .example p:nth-of-type(2n){
+            color: rgb(12, 12, 237);
+            font-weight: bolder;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo class examples</h1>
+    <a href="#myid1">Article</a>
+    <p id="myid1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing.
+    </p>
+    <a href="#myid2">Article</a>
+    <p id="myid2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing.
+    </p>
+    <h1>Enabled and Disabled-Pseudo class elements</h1>
+    <input type="text" id="first" />
+    <input type="text" name="" id="second" disabled>
+    <h1>Checked- pseudo code</h1>
+    <div class="container-1">
+        <input type="checkbox" name="check-box" id="ch1" />
+        <label for="ch1">Option1</label>
+    </div>
+    <div class="container-2">
+        <input type="checkbox" name="check-box" id="ch2" />
+        <label for="ch2">Option2</label>
+    </div>
+    <div class="example">
+        <h1>First Parent</h1>
+        <p>First child</p>
+        <h1>Second Parent</h1>
+        <p>Second child</p>
+        <h1>Third Parent</h1>
+        <p>Third child</p>
+        <span>Paragraph</span>
+        <p>Fourth child</p>
+    </div>
+</body>
+</html>

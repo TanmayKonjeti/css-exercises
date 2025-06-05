@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+            margin: 5px;
+        }
+        div:hover{  
+            background-color: aqua;
+            color: black;
+        }
+        div:active{
+            background-color: greenyellow;
+        }
+        div:focus{
+            background-color: brown;
+        }
+
+        input:required{
+            border: 2px solid red;
+            padding: 15px;
+        }
+        a:focus {
+            outline: 2px solid blue;
+            background-color: yellow;
+            color: red;
+        }
+        a:visited{
+            outline: 4px solid blueviolet;
+            background-color: aquamarine;
+            color: crimson;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>Div Element</div>
+    <div>Div Element</div>
+    <div>Div Element</div>
+    <input type="text" required />
+
+    <!-- <a href="#">Click or Tab to Focus Me</a> -->
+    <a href="#">Click or Tab to Focus Me</a>
+
+    <div class="target">
+        <a href="">Target</a>
+    </div>
+</body>
+</html>
